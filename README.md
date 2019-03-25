@@ -49,7 +49,7 @@ To install mysqlclient :
 
 To install unoconv :
 
-sudo apt-get install unoconv
+> sudo apt-get install unoconv
 
 ## Description
 
