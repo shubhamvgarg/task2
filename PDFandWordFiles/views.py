@@ -13,8 +13,10 @@ import os
 
 
 def Upload(request):
+    #if request is get request
     if request.method=='GET':
         return render(request,"dynamic.html",{})
+    #if request is post request
     if request.method=='POST':
         obj=WordFiles.objects.create()
 
@@ -23,6 +25,7 @@ def Upload(request):
         obj.Title=request.POST["Title"]
         obj.Description=request.POST["Description"]
         obj.save();
+        #Create WordFiles object and use it id as foreign key in WordFiles_Attachment
         print(obj.id)
         for i in val:
             name=i.name
@@ -33,4 +36,5 @@ def Upload(request):
                 os.system("pwd")
                 os.system("unoconv -f pdf "+"media/"+path)
         v=list(map(lambda x: ( "../media/"+x.file,       os.path.splitext("../../media/"+x.file)[0]+".pdf"),WordFiles_Attachment.objects.filter(key_id=obj.id)))
+        #return data for visualization
         return render(request,'word.html',{'Title':obj.Title,'Description':obj.Description,"path_ori":v})
