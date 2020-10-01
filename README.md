@@ -1,6 +1,6 @@
-# FOSSEE Summer Fellowship 2019: Task 2: Uploading document and viewing using document viewer
+# FOSSEE Summer Fellowship 2019: Task 2: Uploading document and viewing using document viewer !
 
-## Requirements
+## Requirement
 
 Please see Requirements.txt
 
@@ -11,7 +11,6 @@ To install python :
 * Add repository : 
 
 > sudo add-apt-repository ppa:jonathonf/python-3.6
-
 
 * Check updates  : 
 
@@ -55,6 +54,6 @@ To install unoconv :
 
 This code will not run in virtual environment because it requires support from libreoffice.
 
-## How to use
+## How to use it
 
 [![Watch the video](https://img.youtube.com/vi/WCAHATbcGSU/maxresdefault.jpg)](https://youtu.be/WCAHATbcGSU)
